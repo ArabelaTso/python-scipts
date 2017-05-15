@@ -1,0 +1,355 @@
+This program should be regarded as a DEBUGGING aid, not as a 
+certifier of correctness.
+Call with the -l flag or read the license file for terms
+and conditions of use.
+Run this program with "-h" for the list of options.
+
+Bugs, questions, and comments should be directed to
+"melatti@di.uniroma1.it".
+
+CMurphi compiler last modified date: Jan 26 2017
+Include files last modified date:    Nov 8 2016
+==========================================================================
+
+==========================================================================
+Caching Murphi Release 5.4.9.1
+Finite-state Concurrent System Verifier.
+
+Caching Murphi Release 5.4.9.1 is based on various versions of Murphi.
+Caching Murphi Release 5.4.9.1 :
+Copyright (C) 2009-2012 by Sapienza University of Rome.
+Murphi release 3.1 :
+Copyright (C) 1992 - 1999 by the Board of Trustees of
+Leland Stanford Junior University.
+
+==========================================================================
+
+Protocol: ./n_flash
+
+Algorithm:
+	Verification by breadth first search.
+	with symmetry algorithm 3 -- Heuristic Small Memory Normalization
+	with permutation trial limit 10.
+
+Memory usage:
+
+	* The size of each state is 552 bits (rounded up to 72 bytes).
+	* The memory allocated for the hash table and state queue is
+	  8 Mbytes.
+	  With two words of overhead per state, the maximum size of
+	  the state space is 99013 states.
+	   * Use option "-k" or "-m" to increase this, if necessary.
+	* Capacity in queue for breadth-first search: 9901 states.
+	   * Change the constant gPercentActiveStates in mu_prolog.inc
+	     to increase this, if necessary.
+
+The following is the error trace for the error:
+
+	Invariant "I2S, p:1" failed.
+
+Startstate Init, d:1 fired.
+Home:0
+Sta.Proc[0].ProcCmd:NODE_None
+Sta.Proc[0].InvMarked:false
+Sta.Proc[0].CacheState:CACHE_I
+Sta.Proc[0].CacheData:Undefined
+Sta.Proc[1].ProcCmd:NODE_None
+Sta.Proc[1].InvMarked:false
+Sta.Proc[1].CacheState:CACHE_I
+Sta.Proc[1].CacheData:Undefined
+Sta.Proc[2].ProcCmd:NODE_None
+Sta.Proc[2].InvMarked:false
+Sta.Proc[2].CacheState:CACHE_I
+Sta.Proc[2].CacheData:Undefined
+Sta.Proc[3].ProcCmd:NODE_None
+Sta.Proc[3].InvMarked:false
+Sta.Proc[3].CacheState:CACHE_I
+Sta.Proc[3].CacheData:Undefined
+Sta.Dir.Pending:false
+Sta.Dir.Local:false
+Sta.Dir.Dirty:false
+Sta.Dir.HeadVld:false
+Sta.Dir.HeadPtr:0
+Sta.Dir.ShrVld:false
+Sta.Dir.ShrSet[0]:false
+Sta.Dir.ShrSet[1]:false
+Sta.Dir.ShrSet[2]:false
+Sta.Dir.ShrSet[3]:false
+Sta.Dir.InvSet[0]:false
+Sta.Dir.InvSet[1]:false
+Sta.Dir.InvSet[2]:false
+Sta.Dir.InvSet[3]:false
+Sta.MemData:1
+Sta.UniMsg[0].Cmd:UNI_None
+Sta.UniMsg[0].Proc:Undefined
+Sta.UniMsg[0].Data:Undefined
+Sta.UniMsg[1].Cmd:UNI_None
+Sta.UniMsg[1].Proc:Undefined
+Sta.UniMsg[1].Data:Undefined
+Sta.UniMsg[2].Cmd:UNI_None
+Sta.UniMsg[2].Proc:Undefined
+Sta.UniMsg[2].Data:Undefined
+Sta.UniMsg[3].Cmd:UNI_None
+Sta.UniMsg[3].Proc:Undefined
+Sta.UniMsg[3].Data:Undefined
+Sta.InvMsg[0].Cmd:INV_None
+Sta.InvMsg[1].Cmd:INV_None
+Sta.InvMsg[2].Cmd:INV_None
+Sta.InvMsg[3].Cmd:INV_None
+Sta.RpMsg[0].Cmd:RP_None
+Sta.RpMsg[1].Cmd:RP_None
+Sta.RpMsg[2].Cmd:RP_None
+Sta.RpMsg[3].Cmd:RP_None
+Sta.WbMsg.Cmd:WB_None
+Sta.WbMsg.Proc:Undefined
+Sta.WbMsg.Data:Undefined
+Sta.ShWbMsg.Cmd:SHWB_None
+Sta.ShWbMsg.Proc:Undefined
+Sta.ShWbMsg.Data:Undefined
+Sta.NakcMsg.Cmd:NAKC_None
+Sta.CurrData:1
+Sta.PrevData:1
+Sta.LastWrVld:false
+Sta.LastWrPtr:Undefined
+Sta.Requester:Undefined
+Sta.Collecting:false
+Sta.FwdCmd:UNI_None
+Sta.FwdSrc:Undefined
+Sta.LastInvAck:Undefined
+Sta.LastOtherInvAck:Undefined
+----------
+
+Rule PI_Remote_GetX, src:1 fired.
+Home:0
+Sta.Proc[0].ProcCmd:NODE_None
+Sta.Proc[0].InvMarked:false
+Sta.Proc[0].CacheState:CACHE_I
+Sta.Proc[0].CacheData:Undefined
+Sta.Proc[1].ProcCmd:NODE_GetX
+Sta.Proc[1].InvMarked:false
+Sta.Proc[1].CacheState:CACHE_I
+Sta.Proc[1].CacheData:Undefined
+Sta.Proc[2].ProcCmd:NODE_None
+Sta.Proc[2].InvMarked:false
+Sta.Proc[2].CacheState:CACHE_I
+Sta.Proc[2].CacheData:Undefined
+Sta.Proc[3].ProcCmd:NODE_None
+Sta.Proc[3].InvMarked:false
+Sta.Proc[3].CacheState:CACHE_I
+Sta.Proc[3].CacheData:Undefined
+Sta.Dir.Pending:false
+Sta.Dir.Local:false
+Sta.Dir.Dirty:false
+Sta.Dir.HeadVld:false
+Sta.Dir.HeadPtr:0
+Sta.Dir.ShrVld:false
+Sta.Dir.ShrSet[0]:false
+Sta.Dir.ShrSet[1]:false
+Sta.Dir.ShrSet[2]:false
+Sta.Dir.ShrSet[3]:false
+Sta.Dir.InvSet[0]:false
+Sta.Dir.InvSet[1]:false
+Sta.Dir.InvSet[2]:false
+Sta.Dir.InvSet[3]:false
+Sta.MemData:1
+Sta.UniMsg[0].Cmd:UNI_None
+Sta.UniMsg[0].Proc:Undefined
+Sta.UniMsg[0].Data:Undefined
+Sta.UniMsg[1].Cmd:UNI_GetX
+Sta.UniMsg[1].Proc:0
+Sta.UniMsg[1].Data:Undefined
+Sta.UniMsg[2].Cmd:UNI_None
+Sta.UniMsg[2].Proc:Undefined
+Sta.UniMsg[2].Data:Undefined
+Sta.UniMsg[3].Cmd:UNI_None
+Sta.UniMsg[3].Proc:Undefined
+Sta.UniMsg[3].Data:Undefined
+Sta.InvMsg[0].Cmd:INV_None
+Sta.InvMsg[1].Cmd:INV_None
+Sta.InvMsg[2].Cmd:INV_None
+Sta.InvMsg[3].Cmd:INV_None
+Sta.RpMsg[0].Cmd:RP_None
+Sta.RpMsg[1].Cmd:RP_None
+Sta.RpMsg[2].Cmd:RP_None
+Sta.RpMsg[3].Cmd:RP_None
+Sta.WbMsg.Cmd:WB_None
+Sta.WbMsg.Proc:Undefined
+Sta.WbMsg.Data:Undefined
+Sta.ShWbMsg.Cmd:SHWB_None
+Sta.ShWbMsg.Proc:Undefined
+Sta.ShWbMsg.Data:Undefined
+Sta.NakcMsg.Cmd:NAKC_None
+Sta.CurrData:1
+Sta.PrevData:1
+Sta.LastWrVld:false
+Sta.LastWrPtr:Undefined
+Sta.Requester:Undefined
+Sta.Collecting:false
+Sta.FwdCmd:UNI_None
+Sta.FwdSrc:Undefined
+Sta.LastInvAck:Undefined
+Sta.LastOtherInvAck:Undefined
+----------
+
+Rule NI_Local_GetX_PutX, src:1 fired.
+Home:0
+Sta.Proc[0].ProcCmd:NODE_None
+Sta.Proc[0].InvMarked:false
+Sta.Proc[0].CacheState:CACHE_I
+Sta.Proc[0].CacheData:Undefined
+Sta.Proc[1].ProcCmd:NODE_GetX
+Sta.Proc[1].InvMarked:false
+Sta.Proc[1].CacheState:CACHE_I
+Sta.Proc[1].CacheData:Undefined
+Sta.Proc[2].ProcCmd:NODE_None
+Sta.Proc[2].InvMarked:false
+Sta.Proc[2].CacheState:CACHE_I
+Sta.Proc[2].CacheData:Undefined
+Sta.Proc[3].ProcCmd:NODE_None
+Sta.Proc[3].InvMarked:false
+Sta.Proc[3].CacheState:CACHE_I
+Sta.Proc[3].CacheData:Undefined
+Sta.Dir.Pending:false
+Sta.Dir.Local:false
+Sta.Dir.Dirty:true
+Sta.Dir.HeadVld:true
+Sta.Dir.HeadPtr:1
+Sta.Dir.ShrVld:false
+Sta.Dir.ShrSet[0]:false
+Sta.Dir.ShrSet[1]:false
+Sta.Dir.ShrSet[2]:false
+Sta.Dir.ShrSet[3]:false
+Sta.Dir.InvSet[0]:false
+Sta.Dir.InvSet[1]:false
+Sta.Dir.InvSet[2]:false
+Sta.Dir.InvSet[3]:false
+Sta.MemData:1
+Sta.UniMsg[0].Cmd:UNI_None
+Sta.UniMsg[0].Proc:Undefined
+Sta.UniMsg[0].Data:Undefined
+Sta.UniMsg[1].Cmd:UNI_PutX
+Sta.UniMsg[1].Proc:0
+Sta.UniMsg[1].Data:1
+Sta.UniMsg[2].Cmd:UNI_None
+Sta.UniMsg[2].Proc:Undefined
+Sta.UniMsg[2].Data:Undefined
+Sta.UniMsg[3].Cmd:UNI_None
+Sta.UniMsg[3].Proc:Undefined
+Sta.UniMsg[3].Data:Undefined
+Sta.InvMsg[0].Cmd:INV_None
+Sta.InvMsg[1].Cmd:INV_None
+Sta.InvMsg[2].Cmd:INV_None
+Sta.InvMsg[3].Cmd:INV_None
+Sta.RpMsg[0].Cmd:RP_None
+Sta.RpMsg[1].Cmd:RP_None
+Sta.RpMsg[2].Cmd:RP_None
+Sta.RpMsg[3].Cmd:RP_None
+Sta.WbMsg.Cmd:WB_None
+Sta.WbMsg.Proc:Undefined
+Sta.WbMsg.Data:Undefined
+Sta.ShWbMsg.Cmd:SHWB_None
+Sta.ShWbMsg.Proc:Undefined
+Sta.ShWbMsg.Data:Undefined
+Sta.NakcMsg.Cmd:NAKC_None
+Sta.CurrData:1
+Sta.PrevData:1
+Sta.LastWrVld:false
+Sta.LastWrPtr:Undefined
+Sta.Requester:Undefined
+Sta.Collecting:false
+Sta.FwdCmd:UNI_None
+Sta.FwdSrc:Undefined
+Sta.LastInvAck:Undefined
+Sta.LastOtherInvAck:Undefined
+----------
+
+Rule NI_Remote_PutX, dst:1 fired.
+The last state of the trace (in full) is:
+Home:0
+Sta.Proc[0].ProcCmd:NODE_None
+Sta.Proc[0].InvMarked:false
+Sta.Proc[0].CacheState:CACHE_I
+Sta.Proc[0].CacheData:Undefined
+Sta.Proc[1].ProcCmd:NODE_None
+Sta.Proc[1].InvMarked:false
+Sta.Proc[1].CacheState:CACHE_E
+Sta.Proc[1].CacheData:1
+Sta.Proc[2].ProcCmd:NODE_None
+Sta.Proc[2].InvMarked:false
+Sta.Proc[2].CacheState:CACHE_I
+Sta.Proc[2].CacheData:Undefined
+Sta.Proc[3].ProcCmd:NODE_None
+Sta.Proc[3].InvMarked:false
+Sta.Proc[3].CacheState:CACHE_I
+Sta.Proc[3].CacheData:Undefined
+Sta.Dir.Pending:false
+Sta.Dir.Local:false
+Sta.Dir.Dirty:true
+Sta.Dir.HeadVld:true
+Sta.Dir.HeadPtr:1
+Sta.Dir.ShrVld:false
+Sta.Dir.ShrSet[0]:false
+Sta.Dir.ShrSet[1]:false
+Sta.Dir.ShrSet[2]:false
+Sta.Dir.ShrSet[3]:false
+Sta.Dir.InvSet[0]:false
+Sta.Dir.InvSet[1]:false
+Sta.Dir.InvSet[2]:false
+Sta.Dir.InvSet[3]:false
+Sta.MemData:1
+Sta.UniMsg[0].Cmd:UNI_None
+Sta.UniMsg[0].Proc:Undefined
+Sta.UniMsg[0].Data:Undefined
+Sta.UniMsg[1].Cmd:UNI_None
+Sta.UniMsg[1].Proc:0
+Sta.UniMsg[1].Data:1
+Sta.UniMsg[2].Cmd:UNI_None
+Sta.UniMsg[2].Proc:Undefined
+Sta.UniMsg[2].Data:Undefined
+Sta.UniMsg[3].Cmd:UNI_None
+Sta.UniMsg[3].Proc:Undefined
+Sta.UniMsg[3].Data:Undefined
+Sta.InvMsg[0].Cmd:INV_None
+Sta.InvMsg[1].Cmd:INV_None
+Sta.InvMsg[2].Cmd:INV_None
+Sta.InvMsg[3].Cmd:INV_None
+Sta.RpMsg[0].Cmd:RP_None
+Sta.RpMsg[1].Cmd:RP_None
+Sta.RpMsg[2].Cmd:RP_None
+Sta.RpMsg[3].Cmd:RP_None
+Sta.WbMsg.Cmd:WB_None
+Sta.WbMsg.Proc:Undefined
+Sta.WbMsg.Data:Undefined
+Sta.ShWbMsg.Cmd:SHWB_None
+Sta.ShWbMsg.Proc:Undefined
+Sta.ShWbMsg.Data:Undefined
+Sta.NakcMsg.Cmd:NAKC_None
+Sta.CurrData:1
+Sta.PrevData:1
+Sta.LastWrVld:false
+Sta.LastWrPtr:Undefined
+Sta.Requester:Undefined
+Sta.Collecting:false
+Sta.FwdCmd:UNI_None
+Sta.FwdSrc:Undefined
+Sta.LastInvAck:Undefined
+Sta.LastOtherInvAck:Undefined
+----------
+
+End of the error trace.
+
+==========================================================================
+
+Result:
+
+	Invariant "I2S, p:1" failed.
+
+State Space Explored:
+
+	123 states, 209 rules fired in 0.10s.
+
+Analysis of State Space:
+
+	There are rules that are never fired.
+	If you are running with symmetry, this may be why.  Otherwise,
+	please run this program with "-pr" for the rules information.
