@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <link href="/Users/Bella/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <title>
+   German Protocol
+  </title>
+  <style>
+   body {
+      margin: 10px;
+    }
+    h1 {
+      font-size:20pt; 
+      color: #436975;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    h3{
+      margin-left: 30px;
+      margin-bottom: 20px;
+      font-size: 18px;
+      color: #436975;
+    }
+    p {
+      text-align: center;
+      margin:0px;
+    }
+    .span_arrow{
+      margin: 10%;
+    }*/
+
+    div
+    {
+      height: 120px;
+      border-radius: 5px;
+      text-align: center;
+    }
+    /*span{
+      height: 120px;
+      width: 30%;
+      border-radius: 5px;
+    }*/
+    table,th,td
+    {
+      text-align: center;
+      /*margin-left: 10%;*/
+      width: 20%;
+    }
+    table{
+      float:left;
+    }
+    th,td{
+      border: 1px solid white;
+    }
+    .ch{
+      border: none;
+    }
+    .men{
+      clear: both;
+      height: 60%;
+      margin-left: 40%;
+      margin-top: 15px;
+      background-color: #FFE698;
+      color: white;
+
+    }
+
+    /*arrow down*/
+     .arrow-down {
+      background-color: #C5E0B4;
+      height: 100px;
+      position: relative;
+      width: 100%;
+      margin-top: 10;
+    }
+
+    .arrow-down:after {
+      content: ' ';
+      height: 0;
+      position: absolute;
+      width: 0;
+
+      border: 10px solid transparent;
+      border-top-color: #C5E0B4;
+
+      top: 100%;
+      left: 50%;
+      margin-left: -10px;
+    }
+
+    .arrow-up {
+      background-color: #C5E0B4;
+      height: 100px;
+      position: relative;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .arrow-up:after {
+      content: ' ';
+      height: 0;
+      position: absolute;
+      width: 0;
+     
+      border: 10px solid transparent;
+      border-bottom-color: #C5E0B4;
+
+      bottom: 100%;
+      left: 50%;
+      margin-left: -10px;
+    }
+    .three_arrow{
+      width: 20%;
+      margin-left: 10%;
+    }
+
+    .client{
+       background-color:lightblue;
+       color:white;
+       margin-left:120px; 
+       width:20%
+    }
+
+    .channel{
+      background-color: #C5E0B4;
+      color: white;
+    }
+    .client_div{
+      height: 70px;
+      
+    }
+    .home{
+      background-color: #F8CBAD;
+      color:white;
+      position:relative;
+      margin-top: -55px;
+      margin-left: 120px;
+    }
+    .mem{
+      border:2px solid #FFE698;
+      margin: 20px;
+      position:relative;
+      top:150px;
+      height: 120px;
+    }
+    .hb{
+      border:2px solid #F8CBAD;
+      margin: 20px;
+      position:relative;
+      top:120px;
+      height: 120px;
+    }
+    .arrow_table{
+      margin: 10%;
+      margin-top: 50%;
+      width: 0%;
+    }
+
+    .div_arrow{
+      margin-top:10px;
+      padding-left: 0px;
+    }
+    .light{
+      color:white;
+    }.dark{
+      background-color: #436975;
+    
+    }
+  </style>
+ </head>
+ <body>
+  <h1>
+   German Protocol Visualization
+  </h1>
+  <h3 id="rule">
+   Rule SendGntE
+  </h3>
+  <!-- client div-->
+  <div class="client_div">
+   <table class="client col-md-4">
+    <tr>
+     <th colspan="2">
+      cache1
+     </th>
+    </tr>
+    <tr>
+     <td>
+      state
+     </td>
+     <td class="light" id="Cache[1].State">
+      I
+     </td>
+    </tr>
+    <tr>
+     <td>
+      data
+     </td>
+     <td class="light" id="Cache[1].Data">
+      1
+     </td>
+    </tr>
+   </table>
+   <table class="client col-md-4">
+    <tr>
+     <th colspan="2">
+      cache2
+     </th>
+    </tr>
+    <tr>
+     <td>
+      state
+     </td>
+     <td class="light" id="Cache[2].State">
+      I
+     </td>
+    </tr>
+    <tr>
+     <td>
+      data
+     </td>
+     <td class="light" id="Cache[2].Data">
+      1
+     </td>
+    </tr>
+   </table>
+   <table class="client col-md-4">
+    <tr>
+     <th colspan="2">
+      cache3
+     </th>
+    </tr>
+    <tr>
+     <td>
+      state
+     </td>
+     <td class="light" id="Cache[3].State">
+      I
+     </td>
+    </tr>
+    <tr>
+     <td>
+      data
+     </td>
+     <td class="light" id="Cache[3].Data">
+      1
+     </td>
+    </tr>
+   </table>
+  </div>
+  <!-- arrows div-->
+  <div>
+   <div class="div_arrow" style="float: left; margin-left: 120px; width: 20%">
+    <div class="col-md-4">
+     <div class="arrow-down" style="margin-right: 3%">
+      <table class="channel arrow_table">
+       <tbody class="arrow_table">
+        <tr>
+         <td class="light" id="Chan1[1].Cmd">
+          Empty
+         </td>
+        </tr>
+        <tr>
+         <td class="light" id="Chan1[1].Data">
+          1
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-4">
+     <div class="arrow-up" style="margin-right: 3%">
+      <table class="channel arrow_table">
+       <tr>
+        <td class="dark" id="Chan2[1].Cmd">
+         GntE
+        </td>
+       </tr>
+       <tr>
+        <td class="light" id="Chan2[1].Data">
+         1
+        </td>
+       </tr>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-4">
+     <div class="arrow-down" style="margin-right: 3%">
+      <table class="channel arrow_table">
+       <tr>
+        <td class="light" id="Chan3[1].Cmd">
+         Empty
+        </td>
+       </tr>
+       <tr>
+        <td class="light" id="Chan3[1].Data">
+         1
+        </td>
+       </tr>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="div_arrow" style="float: left; margin-left: 120px; width: 20%">
+    <div class="col-md-4">
+     <div class="arrow-down" style="margin-right: 3%">
+      <table class="channel arrow_table">
+       <tbody class="arrow_table">
+        <tr>
+         <td class="light" id="Chan1[2].Cmd">
+          Empty
+         </td>
+        </tr>
+        <tr>
+         <td class="light" id="Chan1[2].Data">
+          1
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-4">
+     <div class="arrow-up" style="margin-right: 3%">
+      <table class="channel arrow_table">
+       <tr>
+        <td class="light" id="Chan2[2].Cmd">
+         Empty
+        </td>
+       </tr>
+       <tr>
+        <td class="light" id="Chan2[2].Data">
+         1
+        </td>
+       </tr>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-4">
+     <div class="arrow-down" style="margin-right: 3%">
+      <table class="channel arrow_table">
+       <tr>
+        <td class="light" id="Chan3[2].Cmd">
+         Empty
+        </td>
+       </tr>
+       <tr>
+        <td class="light" id="Chan3[2].Data">
+         1
+        </td>
+       </tr>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="div_arrow" style="float: left; margin-left: 120px; width: 20%">
+    <div class="col-md-4">
+     <div class="arrow-down" style="margin-right: 3%">
+      <table class="channel arrow_table">
+       <tbody class="arrow_table">
+        <tr>
+         <td class="light" id="Chan1[3].Cmd">
+          Empty
+         </td>
+        </tr>
+        <tr>
+         <td class="light" id="Chan1[3].Data">
+          1
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-4">
+     <div class="arrow-up" style="margin-right: 3%">
+      <table class="channel arrow_table">
+       <tr>
+        <td class="light" id="Chan2[3].Cmd">
+         Empty
+        </td>
+       </tr>
+       <tr>
+        <td class="light" id="Chan2[3].Data">
+         1
+        </td>
+       </tr>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-4">
+     <div class="arrow-down" style="margin-right: 3%">
+      <table class="channel arrow_table">
+       <tr>
+        <td class="light" id="Chan3[3].Cmd">
+         Empty
+        </td>
+       </tr>
+       <tr>
+        <td class="light" id="Chan3[3].Data">
+         1
+        </td>
+       </tr>
+      </table>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- home div -->
+  <div class="hb">
+   <p style="color: #F8CBAD; position:relative; left:-46%;">
+    home
+   </p>
+   <div>
+    <table class="home">
+     <tr>
+      <th colspan="3">
+       share list
+      </th>
+     </tr>
+     <tr>
+      <td>
+       client1
+      </td>
+      <td>
+       client2
+      </td>
+      <td>
+       client3
+      </td>
+     </tr>
+     <tr>
+      <td class="dark" id="ShrSet[1]">
+       true
+      </td>
+      <td class="light" id="ShrSet[2]">
+       false
+      </td>
+      <td class="light" id="ShrSet[3]">
+       false
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div>
+    <table class="home">
+     <tr>
+      <th colspan="3">
+       invariant list
+      </th>
+     </tr>
+     <tr>
+      <td>
+       client1
+      </td>
+      <td>
+       client2
+      </td>
+      <td>
+       client3
+      </td>
+     </tr>
+     <tr>
+      <td class="light" id="InvSet[1]">
+       false
+      </td>
+      <td class="light" id="InvSet[2]">
+       false
+      </td>
+      <td class="light" id="InvSet[3]">
+       false
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div>
+    <table class="home">
+     <tr>
+      <th>
+       Current Cmd
+      </th>
+      <td class="dark" id="CurCmd">
+       Empty
+      </td>
+     </tr>
+     <tr>
+      <th>
+       Current Ptr
+      </th>
+      <td class="light" id="CurPtr">
+       1
+      </td>
+     </tr>
+    </table>
+   </div>
+  </div>
+  <!-- memory div -->
+  <div class="mem">
+   <p style="color: #FFE698">
+    memory
+   </p>
+   <table class="men">
+    <tr>
+     <th>
+      ExGnt
+     </th>
+    </tr>
+    <tr>
+     <td class="dark" id="ExGntd">
+      true
+     </td>
+    </tr>
+   </table>
+  </div>
+ </body>
+</html>

@@ -9,8 +9,8 @@ def filenameList():
     nameList = []
     ListNameStr = listdir('murphi_trace')
     m = len(ListNameStr)
-    # for i in range(1, m):
-    nameList.append(ListNameStr[3].split('.')[0])
+    for i in range(1, m):
+        nameList.append(ListNameStr[i].split('.')[0])
 
     print(nameList)
     return nameList
