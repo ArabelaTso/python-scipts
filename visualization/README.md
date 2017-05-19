@@ -1,6 +1,7 @@
 ## ReadMe
 
-该脚本用于将murphi生成的状态追踪文件，生成可视化的图片或视频，方便形式化验证的具象化、
+该脚本用于将murphi生成的状态追踪文件，生成可视化的图片或视频，方便形式化验证的具象化
+具体实现方法讲解见： [Arabela blog —— 可视化方法实现](https://arabelatso.github.io/2017/05/10/visualization/)
 
 ### 使用说明
 
