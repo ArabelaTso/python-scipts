@@ -1,0 +1,921 @@
+<html>
+ <head>
+  <style type="text/css">
+   h1{
+		font-size:20pt; 
+      	color: #436975;
+      	text-align: center;
+      	margin-bottom: 20px;
+	}
+	body{
+		margin: 10px;
+		margin-left: 3px;
+	}
+	p{
+		margin: 5px;
+		margin-left: 10px;
+		color: white;
+		text-align: center;
+	}
+	th,td{
+		border: 1px solid white;
+	}
+	table{
+		text-align: center;
+		color: white;
+		/*border: 1px solid white;*/
+	}
+	span{
+		float: left;
+		height: inherit;
+
+	}
+	.container{
+		margin:10px;
+		width:1220px;
+	}
+	.rule{
+		text-align: left;
+		color: #436975;
+		margin-left: 30px;
+	}
+	/***********************************/
+	/*proc part*/
+
+	.container_proc{
+		height: 90px;
+	}
+	.proc{
+		
+		width:380px;
+		background-color: #6699CC;
+		margin-left: 20px;
+		
+	}
+	.proc_table{
+		margin: 10px;
+		margin-left: 15px;
+		font-size: 13px;
+		margin-top: 5px;
+		width: 350px;
+	}
+	/***********************************/
+	/*msg part*/
+	.container_msg{
+		height: 120px;
+		margin-top: 20px;
+	}
+	.msg{
+		width: 380px;
+		margin-left: 20px;
+	}
+	.unimsg{
+		width: 120px;
+		margin-right: 5px;
+		background-color: #99CC99;
+	}
+
+	.msg_table{
+		font-size: 10pt;
+		margin-left: 5px;
+		margin-top: 15px;
+		width: 112px;
+	}
+
+	/*arrow down*/
+     .arrow-down {
+      position: relative;
+    }
+
+    .arrow-down:after {
+      content: ' ';
+      height: 0;
+      position: absolute;
+      width: 0;
+
+      border: 20px solid transparent;
+      border-top-color: #99CC99;
+
+      top: 100%;
+      left: 50%;
+      margin-left: -20px;
+    }
+    .arrow-up {
+      position: relative;
+    }
+
+    .arrow-up:after {
+      content: ' ';
+      height: 0;
+      position: absolute;
+      width: 0;
+     
+      border: 20px solid transparent;
+      border-bottom-color: #99CC99;
+
+      bottom: 100%;
+      left: 50%;
+      margin-left: -20px;
+
+
+    }
+	/***********************************/
+	/*home part*/
+	.container_home{
+		height: 220px;
+		margin:30px;
+		margin-top: 20px;
+		border:3px solid #FFC001;
+		content: '';
+		width: 1180px;
+		margin-left: 25px;
+		margin-bottom: 0px;
+	}
+	.home_as_node{
+		width: 390px;
+		height: 170px;
+	}
+	.home_node_node
+	{
+		width: 375px;
+		background-color: #6699CC;
+		height: 80px;
+		margin-left: 10px;
+	}
+	.home_node_dir{
+		width: 375px;
+		background-color: #99CC99;
+		height: 90px;
+		margin-left: 10px;
+
+	}
+	.home_msg_table{
+		margin-top: 2px;
+	}
+	.home_msg{
+		margin-top: 15px;
+	    margin-left: 15px;
+	    height: 135px;
+	    width: 380px;
+	}
+	.home_dir{
+		background-color: #FFC001;
+		width: 365px;
+		height: 170px;
+		margin-left: 20px;
+	}
+	.dir_table{
+		margin: 0px;
+		margin-left: 5px;
+	}
+
+	/******************************************/
+	/*mem part*/
+	.memory_info{
+		border: 3px solid #FF9999;
+		height: 100px;
+		margin:30px;
+		margin-top: 10px;
+		content: '';
+		width: 1180px;
+		margin-left: 25px;
+	}
+	.men_table{
+		/*border: 1px solid #FF9999;*/
+		margin-left: 10px;
+		color: #FF9999;
+		width: 1160px;
+	}
+	.men_tr:nth-child(odd){background-color: #FF9999;color: white;}
+
+	/******************************************/
+	/*change div*/
+	.dark{
+		background-color: #436975;
+	}
+	.light{
+		background-color: transparent;
+	}
+  </style>
+ </head>
+ <body>
+  <h1>
+   Flash Protocol
+  </h1>
+  <p class="rule" id="rule">
+   Rule NI_Local_Get_Put
+  </p>
+  <!-- nodes div -->
+  <div class="container container_proc">
+   <span class="proc">
+    <p>
+     node 1
+    </p>
+    <table class="proc_table">
+     <tr>
+      <th>
+       CacheState
+      </th>
+      <th>
+       CacheData
+      </th>
+      <th>
+       InvMark
+      </th>
+      <th>
+       ProcCmd
+      </th>
+     </tr>
+     <tr>
+      <td class="dark" id="Sta.Proc[1].CacheState">
+       CACHE_S
+      </td>
+      <td class="dark" id="Sta.Proc[1].CacheData">
+       1
+      </td>
+      <td class="dark" id="Sta.Proc[1].InvMarked">
+       false
+      </td>
+      <td class="dark" id="Sta.Proc[1].ProcCmd">
+       NODE_None
+      </td>
+     </tr>
+    </table>
+   </span>
+   <span class="proc">
+    <p>
+     node 2
+    </p>
+    <table class="proc_table">
+     <tr>
+      <th>
+       CacheState
+      </th>
+      <th>
+       CacheData
+      </th>
+      <th>
+       InvMark
+      </th>
+      <th>
+       ProcCmd
+      </th>
+     </tr>
+     <tr>
+      <td class="light" id="Sta.Proc[2].CacheState">
+       CACHE_I
+      </td>
+      <td class="light" id="Sta.Proc[2].CacheData">
+       Undefined
+      </td>
+      <td class="dark" id="Sta.Proc[2].InvMarked">
+       false
+      </td>
+      <td class="dark" id="Sta.Proc[2].ProcCmd">
+       NODE_Get
+      </td>
+     </tr>
+    </table>
+   </span>
+   <span class="proc">
+    <p>
+     node 3
+    </p>
+    <table class="proc_table">
+     <tr>
+      <th>
+       CacheState
+      </th>
+      <th>
+       CacheData
+      </th>
+      <th>
+       InvMark
+      </th>
+      <th>
+       ProcCmd
+      </th>
+     </tr>
+     <tr>
+      <td class="light" id="Sta.Proc[3].CacheState">
+       CACHE_I
+      </td>
+      <td class="light" id="Sta.Proc[3].CacheData">
+       Undefined
+      </td>
+      <td class="dark" id="Sta.Proc[3].InvMarked">
+       false
+      </td>
+      <td class="dark" id="Sta.Proc[3].ProcCmd">
+       NODE_None
+      </td>
+     </tr>
+    </table>
+   </span>
+  </div>
+  <!-- msg div -->
+  <div class="container container_msg">
+   <!-- node 1 msg -->
+   <span class="msg">
+    <span class="arrow-down">
+     <span class="arrow-up unimsg">
+      <table class="msg_table">
+       <tr>
+        <th colspan="2">
+         UniMsg
+        </th>
+       </tr>
+       <tr>
+        <td>
+         Cmd
+        </td>
+        <td class="dark" id="Sta.UniMsg[1].Cmd">
+         UNI_None
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Proc
+        </td>
+        <td class="dark" id="Sta.UniMsg[1].Proc">
+         0
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Data
+        </td>
+        <td class="dark" id="Sta.UniMsg[1].Data">
+         1
+        </td>
+       </tr>
+      </table>
+     </span>
+    </span>
+    <span class="arrow-down">
+     <span class="arrow-up unimsg">
+      <table class="msg_table">
+       <tr>
+        <th colspan="2">
+         InvMsg
+        </th>
+       </tr>
+       <tr>
+        <td>
+         Cmd
+        </td>
+        <td class="light" id="Sta.InvMsg[1].Cmd">
+         INV_None
+        </td>
+       </tr>
+      </table>
+     </span>
+    </span>
+    <span class="arrow-down">
+     <span class="arrow-up unimsg" style="margin-right: 0px">
+      <table class="msg_table">
+       <tr>
+        <th colspan="2">
+         RpMsg
+        </th>
+       </tr>
+       <tr>
+        <td>
+         Cmd
+        </td>
+        <td class="light" id="Sta.RpMsg[1].Cmd">
+         RP_None
+        </td>
+       </tr>
+      </table>
+     </span>
+    </span>
+   </span>
+   <!-- node 2 msg -->
+   <span class="msg">
+    <span class="arrow-down">
+     <span class="arrow-up unimsg">
+      <table class="msg_table">
+       <tr>
+        <th colspan="2">
+         UniMsg
+        </th>
+       </tr>
+       <tr>
+        <td>
+         Cmd
+        </td>
+        <td class="dark" id="Sta.UniMsg[2].Cmd">
+         UNI_Put
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Proc
+        </td>
+        <td class="dark" id="Sta.UniMsg[2].Proc">
+         0
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Data
+        </td>
+        <td class="dark" id="Sta.UniMsg[2].Data">
+         1
+        </td>
+       </tr>
+      </table>
+     </span>
+    </span>
+    <span class="arrow-down">
+     <span class="arrow-up unimsg">
+      <table class="msg_table">
+       <tr>
+        <th colspan="2">
+         InvMsg
+        </th>
+       </tr>
+       <tr>
+        <td>
+         Cmd
+        </td>
+        <td class="light" id="Sta.InvMsg[2].Cmd">
+         INV_None
+        </td>
+       </tr>
+      </table>
+     </span>
+    </span>
+    <span class="arrow-down">
+     <span class="arrow-up unimsg" style="margin-right: 0px">
+      <table class="msg_table">
+       <tr>
+        <th colspan="2">
+         RpMsg
+        </th>
+       </tr>
+       <tr>
+        <td>
+         Cmd
+        </td>
+        <td class="light" id="Sta.RpMsg[2].Cmd">
+         RP_None
+        </td>
+       </tr>
+      </table>
+     </span>
+    </span>
+   </span>
+   <!-- node 3 msg -->
+   <span class="msg">
+    <span class="arrow-down">
+     <span class="arrow-up unimsg">
+      <table class="msg_table">
+       <tr>
+        <th colspan="2">
+         UniMsg
+        </th>
+       </tr>
+       <tr>
+        <td>
+         Cmd
+        </td>
+        <td class="light" id="Sta.UniMsg[3].Cmd">
+         UNI_None
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Proc
+        </td>
+        <td class="dark" id="Sta.UniMsg[3].Proc">
+         Undefined
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Data
+        </td>
+        <td class="dark" id="Sta.UniMsg[3].Data">
+         Undefined
+        </td>
+       </tr>
+      </table>
+     </span>
+    </span>
+    <span class="arrow-down">
+     <span class="arrow-up unimsg">
+      <table class="msg_table">
+       <tr>
+        <th colspan="2">
+         InvMsg
+        </th>
+       </tr>
+       <tr>
+        <td>
+         Cmd
+        </td>
+        <td class="light" id="Sta.InvMsg[3].Cmd">
+         INV_None
+        </td>
+       </tr>
+      </table>
+     </span>
+    </span>
+    <span class="arrow-down">
+     <span class="arrow-up unimsg" style="margin-right: 0px">
+      <table class="msg_table">
+       <tr>
+        <th colspan="2">
+         RpMsg
+        </th>
+       </tr>
+       <tr>
+        <td>
+         Cmd
+        </td>
+        <td class="light" id="Sta.RpMsg[3].Cmd">
+         RP_None
+        </td>
+       </tr>
+      </table>
+     </span>
+    </span>
+   </span>
+  </div>
+  <!-- home div -->
+  <div class="container container_home">
+   <p style="color: #FF9966; text-align: left">
+    home
+   </p>
+   <!-- home left part -->
+   <span class="home_as_node">
+    <span class="home_node_node">
+     <p>
+      home as node
+     </p>
+     <table class="proc_table">
+      <tr>
+       <th>
+        CacheState
+       </th>
+       <th>
+        CacheData
+       </th>
+       <th>
+        InvMark
+       </th>
+       <th>
+        ProcCmd
+       </th>
+      </tr>
+      <tr>
+       <td class="light" id="Sta.Proc[0].CacheState">
+        CACHE_I
+       </td>
+       <td class="light" id="Sta.Proc[0].CacheData">
+        Undefined
+       </td>
+       <td class="dark" id="Sta.Proc[0].InvMarked">
+        false
+       </td>
+       <td class="dark" id="Sta.Proc[0].ProcCmd">
+        NODE_None
+       </td>
+      </tr>
+     </table>
+    </span>
+    <span class="home_node_dir">
+     <span class="unimsg">
+      <table class="msg_table home_msg_table">
+       <tr>
+        <th colspan="2">
+         UniMsg
+        </th>
+       </tr>
+       <tr>
+        <td>
+         Cmd
+        </td>
+        <td class="light" id="Sta.UniMsg[0].Cmd">
+         UNI_None
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Proc
+        </td>
+        <td class="dark" id="Sta.UniMsg[0].Proc">
+         Undefined
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Data
+        </td>
+        <td class="dark" id="Sta.UniMsg[0].Data">
+         Undefined
+        </td>
+       </tr>
+      </table>
+     </span>
+     <span class="unimsg">
+      <table class="msg_table home_msg_table">
+       <tr>
+        <th colspan="2">
+         InvMsg
+        </th>
+       </tr>
+       <tr>
+        <td>
+         Cmd
+        </td>
+        <td class="light" id="Sta.InvMsg[0].Cmd">
+         INV_None
+        </td>
+       </tr>
+      </table>
+     </span>
+     <span class="unimsg">
+      <table class="msg_table home_msg_table">
+       <tr>
+        <th colspan="2">
+         RpMsg
+        </th>
+       </tr>
+       <tr>
+        <td>
+         Cmd
+        </td>
+        <td class="light" id="Sta.RpMsg[0].Cmd">
+         RP_None
+        </td>
+       </tr>
+      </table>
+     </span>
+    </span>
+   </span>
+   <!-- home keeps msg -->
+   <span class="home_msg">
+    <span class="arrow-down">
+     <span class="arrow-up unimsg">
+      <table class="msg_table">
+       <tr>
+        <th colspan="2">
+         WbMsg
+        </th>
+       </tr>
+       <tr>
+        <td>
+         Cmd
+        </td>
+        <td class="light" id="Sta.WbMsg.Cmd">
+         WB_None
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Proc
+        </td>
+        <td class="dark" id="Sta.WbMsg.Proc">
+         Undefined
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Data
+        </td>
+        <td class="dark" id="Sta.WbMsg.Data">
+         Undefined
+        </td>
+       </tr>
+      </table>
+     </span>
+    </span>
+    <span class="arrow-down">
+     <span class="arrow-up unimsg">
+      <table class="msg_table">
+       <tr>
+        <th colspan="2">
+         ShWbMsg
+        </th>
+       </tr>
+       <tr>
+        <td>
+         Cmd
+        </td>
+        <td class="light" id="Sta.ShWbMsg.Cmd">
+         SHWB_None
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Proc
+        </td>
+        <td class="dark" id="Sta.ShWbMsg.Proc">
+         Undefined
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Data
+        </td>
+        <td class="dark" id="Sta.ShWbMsg.Data">
+         Undefined
+        </td>
+       </tr>
+      </table>
+     </span>
+    </span>
+    <span class="arrow-down">
+     <span class="arrow-up unimsg" style="margin-right: 0px">
+      <table class="msg_table">
+       <tr>
+        <th colspan="2">
+         NakcMsg
+        </th>
+       </tr>
+       <tr>
+        <td>
+         Cmd
+        </td>
+        <td class="light" id="Sta.NakcMsg.Cmd">
+         NAKC_None
+        </td>
+       </tr>
+      </table>
+     </span>
+    </span>
+   </span>
+   <!-- home as dir -->
+   <span class="home_dir">
+    <p>
+     home as dir
+    </p>
+    <table class="proc_table dir_table">
+     <tr>
+      <th>
+       Pending
+      </th>
+      <th>
+       Dirty
+      </th>
+      <th>
+       Local
+      </th>
+     </tr>
+     <tr>
+      <td class="light" id="Sta.Dir.Pending">
+       false
+      </td>
+      <td class="light" id="Sta.Dir.Dirty">
+       false
+      </td>
+      <td class="light" id="Sta.Dir.Local">
+       false
+      </td>
+     </tr>
+    </table>
+    <table class="proc_table dir_table" style="margin-top: 0px; ">
+     <tr>
+      <th>
+       HeadVld
+      </th>
+      <th>
+       HeadPtr
+      </th>
+      <th>
+       ShrVld
+      </th>
+     </tr>
+     <tr>
+      <td class="dark" id="Sta.Dir.HeadVld">
+       true
+      </td>
+      <td class="dark" id="Sta.Dir.HeadPtr">
+       1
+      </td>
+      <td class="dark" id="Sta.Dir.ShrVld">
+       true
+      </td>
+     </tr>
+    </table>
+    <table class="proc_table dir_table">
+     <tr>
+      <th>
+       ShrSet
+      </th>
+      <td class="light" id="Sta.Dir.ShrSet[0]">
+       false
+      </td>
+      <td class="light" id="Sta.Dir.ShrSet[1]">
+       false
+      </td>
+      <td class="dark" id="Sta.Dir.ShrSet[2]">
+       true
+      </td>
+      <td class="light" id="Sta.Dir.ShrSet[3]">
+       false
+      </td>
+     </tr>
+     <tr>
+      <th>
+       InvSet
+      </th>
+      <td class="light" id="Sta.Dir.InvSet[0]">
+       false
+      </td>
+      <td class="light" id="Sta.Dir.InvSet[1]">
+       false
+      </td>
+      <td class="dark" id="Sta.Dir.InvSet[2]">
+       true
+      </td>
+      <td class="light" id="Sta.Dir.InvSet[3]">
+       false
+      </td>
+     </tr>
+    </table>
+   </span>
+  </div>
+  <!-- mem div -->
+  <div class="memory_info">
+   <p style="text-align:left; color: #FF9999">
+    Other Info
+   </p>
+   <table class="men_table">
+    <tr class="men_tr">
+     <th>
+      MemData
+     </th>
+     <th>
+      CurData
+     </th>
+     <th>
+      PreData
+     </th>
+     <th>
+      LastWrVld
+     </th>
+     <th>
+      LastWrPtr
+     </th>
+     <th>
+      Requester
+     </th>
+     <th>
+      Collecting
+     </th>
+     <th>
+      FwdCmd
+     </th>
+     <th>
+      FwdSrc
+     </th>
+     <th>
+      LastInvAck
+     </th>
+     <th>
+      LastOtherInvAck
+     </th>
+    </tr>
+    <tr>
+     <td class="light" id="Sta.MemData">
+      1
+     </td>
+     <td class="light" id="Sta.CurrData">
+      1
+     </td>
+     <td class="light" id="Sta.PrevData">
+      1
+     </td>
+     <td class="light" id="Sta.LastWrVld">
+      false
+     </td>
+     <td class="light" id="Sta.LastWrPtr">
+      Undefined
+     </td>
+     <td class="light" id="Sta.Requester">
+      Undefined
+     </td>
+     <td class="light" id="Sta.Collecting">
+      false
+     </td>
+     <td class="light" id="Sta.FwdCmd">
+      UNI_None
+     </td>
+     <td class="light" id="Sta.FwdSrc">
+      Undefined
+     </td>
+     <td class="light" id="Sta.LastInvAck">
+      Undefined
+     </td>
+     <td class="light" id="Sta.LastOtherInvAck">
+      Undefined
+     </td>
+    </tr>
+   </table>
+  </div>
+ </body>
+</html>
